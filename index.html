@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="IP4MRHY7fAyLzkyKzurxzc">
+<head data-page-node-id="vS09Abw5b2YSJhzhcyfvSw">
+<meta charset="UTF-8" data-page-node-id="RQQ8N9UMY4iET8aDUDA10Y">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" data-page-node-id="eP8qd1gCaO6IDVUSMnxqxb">
+<title>公司整体核算表编制 · 互动测验</title>
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; font-family:-apple-system,"Microsoft YaHei","PingFang SC",sans-serif; background:#f2f3f5; color:#1f2329; line-height:1.6; }
+  .app { max-width:480px; margin:0 auto; min-height:100vh; background:#f2f3f5; padding:16px 16px 40px; }
+  .card { background:#fff; border-radius:14px; padding:18px 16px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin-bottom:14px; }
+  .topbar { display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#646a73; margin-bottom:10px; }
+  .badge { background:#eaf0ff; color:#3370ff; padding:2px 8px; border-radius:10px; font-size:12px; }
+  .progress { height:6px; background:#e5e6eb; border-radius:4px; overflow:hidden; margin-bottom:14px; }
+  .progress > i { display:block; height:100%; background:#3370ff; transition:width .3s; }
+  h1 { font-size:20px; margin:0 0 6px; }
+  .sub { font-size:13px; color:#8f959e; margin:0 0 16px; }
+  .stem { font-size:16px; font-weight:700; margin-bottom:12px; line-height:1.5; }
+  .opt { display:flex; align-items:flex-start; gap:10px; border:1.5px solid #dee0e3; border-radius:10px; padding:11px 12px; margin-bottom:9px; cursor:pointer; transition:.15s; }
+  .opt:active { background:#f7f8fa; }
+  .opt .k { flex:none; width:22px; height:22px; border-radius:50%; background:#f2f3f5; color:#1f2329; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; }
+  .opt .t { font-size:15px; line-height:1.5; }
+  .opt.sel { border-color:#3370ff; background:#f5f8ff; }
+  .opt.correct { border-color:#34c724; background:#f0fbf0; }
+  .opt.wrong { border-color:#f54a45; background:#fff1f0; }
+  .opt.dim { opacity:.5; }
+  .opt.locked { cursor:default; }
+  .hint { font-size:13px; color:#8f959e; margin:2px 0 10px; }
+  .btn { width:100%; border:none; border-radius:10px; padding:13px; font-size:16px; font-weight:600; background:#3370ff; color:#fff; cursor:pointer; margin-top:6px; }
+  .btn:disabled { background:#c9cdd4; cursor:not-allowed; }
+  .btn.ghost { background:#fff; color:#3370ff; border:1.5px solid #3370ff; }
+  .explain { margin-top:12px; border-radius:10px; padding:13px; background:#f7f8fa; font-size:14px; line-height:1.7; }
+  .explain .tag { display:inline-block; font-size:12px; font-weight:700; padding:2px 8px; border-radius:8px; margin-bottom:8px; }
+  .explain .ok { background:#e8faea; color:#1a8c1a; }
+  .explain .no { background:#ffeceb; color:#d4380d; }
+  .explain b { color:#3370ff; }
+  .result .score { text-align:center; margin:10px 0; }
+  .result .score-label { font-size:16px; color:#646a73; margin-bottom:2px; font-weight:600; }
+  .result .score-num { font-size:64px; font-weight:800; color:#3370ff; line-height:1.1; }
+  .result .score-of { font-size:20px; color:#8f959e; font-weight:600; }
+  .result .line { text-align:center; color:#646a73; font-size:14px; margin-top:8px; }
+  .sec-title { font-size:16px; font-weight:700; margin:18px 0 8px; color:#1f2329; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  th,td { border:1px solid #e5e6eb; padding:7px 6px; text-align:left; vertical-align:top; }
+  th { background:#f2f3f5; color:#646a73; font-weight:600; }
+  td.ans { color:#3370ff; font-weight:700; white-space:nowrap; }
+  .note { font-size:12.5px; color:#8f959e; margin-top:10px; line-height:1.7; }
+  .center { text-align:center; }
+  .lead { font-size:14px; color:#646a73; }
+</style>
+</head>
+<body data-page-node-id="aLBMG4SNlw4MT3Rn4bLd8T">
+<div class="app" id="app" data-page-node-id="K9vrxcxgWPgGgh0VWxCXAy"></div>
+<script id="data" type="application/json">{"questions": [{"emoji": "❌", "type": "single", "score": 6, "stem": "1. 以下哪个说法是错误的？", "options": [{"key": "A", "text": "跨月交付产品/服务的，必须设定【接单（签单）额】。"}, {"key": "B", "text": "办理充值卡的，必须设定【接单（签单）额】。"}, {"key": "C", "text": "核算表的收入以接单（签单）额为准。"}], "answer": ["C"], "explain": "核算表的收入必须以销售额（实际交付、确认的收入）为准，接单（签单）额只是反映业务动向的先行参考指标，不能作为收入入账。A、B 的说法正确：正因为“跨月交付”和“充值卡（先收钱、后交付）”这两种业务模式下，当月销售额无法反映当月真实的业务量，才必须额外设定【接单（签单）额】科目辅助观察；但若像 C 那样直接以签单额确认收入，会把尚未交付的业务虚计入当期业绩，违背收入与交付“一一对应”的原则。"}, {"emoji": "🎯", "type": "single", "score": 6, "stem": "2. 对于公司今后打算重点发展的某个业务/产品，在核算表上如何设置科目？", "options": [{"key": "A", "text": "即使现在其销售额占比不高，也不能合并同类项"}, {"key": "B", "text": "可以与其他占比较小的科目合并同类项"}], "answer": ["A"], "explain": "科目设置遵循“重点业务单独列示、非重点业务才合并同类项”的原则。今后打算重点发展的业务，即使当前销售额占比不高，也必须单独设置科目——只有从现在开始积累数据，才能看清该项业务的成长轨迹与投入产出，为后续加大投入提供依据；若提前合并进“其他”类科目，等于放弃了数据积累，等业务真正做起来时已无据可查。“合并同类项”仅适用于不打算重点发展、占比小且无单独管控价值的科目。"}, {"emoji": "💰", "type": "single", "score": 6, "stem": "3. 对于成本类项科目的设置，以下哪个说法是正确的？", "options": [{"key": "A", "text": "成本类项下不用再细分二级科目了"}, {"key": "B", "text": "成本类科目没有什么削减的空间"}, {"key": "C", "text": "成本的具体明细金额，最好另外做一个可以链接的附表"}], "answer": ["C"], "explain": "核算表追求简明直观、让一线员工也能看懂。成本的具体明细（每种材料的采购价、用量等）项目繁多，最好另外编制一张可以链接的附表存放明细，主表只保留汇总科目——既保住主表的清晰，又保留了可随时穿透查看的明细，C 正确。A 错：成本项下应按管理需要细分二级科目（如材料费、外协加工费、模具费等）；B 错：成本（尤其采购环节）恰恰是削减空间最大的科目，通过比价采购、用量管控可直接提升附加值，是核算表的重点管控对象。"}, {"emoji": "📣", "type": "single", "score": 6, "stem": "4. 对于销售类费用，以下哪个说法是错误的？", "options": [{"key": "A", "text": "销售类费用的科目应该放在管理费科目的后面"}, {"key": "B", "text": "销售类费用非常值得投入，不能苛求越少越好"}, {"key": "C", "text": "第三方介绍业务的佣金也属于销售类费用"}], "answer": ["A"], "explain": "科目排序体现经营导向：销售类费用直接服务于收入获取，应排在管理类费用之前，而不是放在管理费科目后面，A 说法错误。B 正确：销售类费用与业绩联动，是“能下金蛋”的投入，考核的是投入产出比，不能苛求绝对额越少越好；C 正确：第三方介绍业务的佣金直接用于业务获取，属于典型的销售类费用。"}, {"emoji": "🍳", "type": "single", "score": 6, "stem": "5. 餐饮业的试菜费用，应该设置成核算表的什么费用？", "options": [{"key": "A", "text": "研发类费用"}, {"key": "B", "text": "销售类费用"}], "answer": ["A"], "explain": "试菜的实质是开发新菜品——面向的是未来的产品与收入，性质上属于产品研发，应计入研发类费用。研发类费用是“对未来的投资”，不与当期收入直接联动，不应被简单削减。餐饮业虽是传统行业，但试菜正是它典型的研发活动，这是行业化设置“研发类科目”的经典案例。若误将其归入销售类费用，会错估当期销售投入的产出效率。"}, {"emoji": "⏰", "type": "single", "score": 6, "stem": "6. 没有打算做加班时间统计的企业，应该怎么对待核算表的【加班时间】科目？", "options": [{"key": "A", "text": "也必须统计加班时间并填写"}, {"key": "B", "text": "可以暂时不填写【加班时间】"}], "answer": ["B"], "explain": "核算表的编制要与企业的实际管理水平相匹配，避免“为了填表而填表”、给现场造成过重的数据负担。没有打算做加班时间统计的企业，可以暂时不填写该科目，待日后管理有需要、条件成熟时再启用；核算表首先保证收入、费用、总时间等核心科目数据真实可用，比形式上填满全部科目更重要。"}, {"emoji": "👥", "type": "single", "score": 6, "stem": "7. 对于时间管控没有要求的行业或者无法缩短时间的行业，可以考虑采用什么指标代替【单位时间附加值】？", "options": [{"key": "A", "text": "单位时间产值"}, {"key": "B", "text": "人均附加值"}], "answer": ["B"], "explain": "【单位时间附加值】的激励逻辑是“缩短时间、提升单位时间产出”。但对时间没有管控要求、或作业时间刚性强、无法缩短的行业，时间这一维度失去改善空间，此时应把分母从“时间”换成“人数”，用【人均附加值】（附加值÷人数）代替，将管理抓手转向人员效率与编制优化上。A 项【单位时间产值】仍以时间为分母（主要供制造部门看产能效率，见第 10 题），起不到“代替”的作用。"}, {"emoji": "🏢", "type": "single", "score": 6, "stem": "8. 与制造类费用或销售类费用相比，管理类费用，一般情况下，是否是核算表中的管控重点？", "options": [{"key": "A", "text": "是"}, {"key": "B", "text": "不是"}], "answer": ["B"], "explain": "制造类、销售类费用大多随业务量联动（变动性质），收入增长时费用同步增长属正常经营现象；而管理类费用基本属于固定费，不与业务量联动，无论业绩好坏都刚性发生，是纯粹的利润消耗项，因此是最确定、最直接的削减对象——“销售额最大化、费用最小化”的管控重心就落在管理类费用上。这也与第 4 题“销售类费用值得投入”互为印证：不重点压缩销售费，管控重心自然在管理费。"}, {"emoji": "🏪", "type": "single", "score": 6, "stem": "9. 如果是某个店铺的核算表，费用的最后需要额外添加的科目是", "options": [{"key": "A", "text": "【公司总部费用分摊】"}, {"key": "B", "text": "【库存利息】"}], "answer": ["A"], "explain": "单个店铺作为独立核算单元，表内只反映店铺自身发生的收入与费用，但店铺实际享受了总部品牌、管理、财务等职能的支持。若不在费用最后添加【公司总部费用分摊】科目，店铺核算表会高估盈利能力，导致经营判断失真；分摊之后反映的才是店铺对公司的真实贡献。【库存利息】主要适用于制造/库存类核算表（对库存资金占用计息、促使周转加快），不是店铺核算表需要额外添加的科目。"}, {"emoji": "🏭", "type": "single", "score": 6, "stem": "10. 制造业（收入部分有生产额科目）可考虑设置什么科目，以便看清生产部门的效率？", "options": [{"key": "A", "text": "【单位时间产值】"}, {"key": "B", "text": "【单位时间附加值】"}], "answer": ["A"], "explain": "制造业收入部分设有“生产额”科目时，【单位时间产值】＝生产额 ÷ 生产部门总劳动时间，直接反映生产部门单位时间的产出能力（产能效率），可使生产部门的效率一目了然。【单位时间附加值】是全公司层面的最终经营成果指标（附加值÷总时间），综合了收入与全部费用，用于衡量整体经营效益，不适合单独考察生产部门的效率。"}, {"emoji": "📂", "type": "multi", "score": 8, "stem": "11. 一般费用项下的费用大分类，可以分成（　　　　）", "options": [{"key": "A", "text": "销售类费用科目"}, {"key": "B", "text": "成本类科目"}, {"key": "C", "text": "研发类费用科目"}, {"key": "D", "text": "管理类费用科目"}], "answer": ["A", "C", "D"], "explain": "一般费用项下的费用按性质分为大分类：销售类费用、研发类费用、管理类费用科目（部分企业按业务性质还会增设制造类/服务类等），A、C、D 均正确。B 错误：成本类科目（材料成本、采购成本等）是与“一般费用”并列的独立大类，设置在费用项下最前端单独核算，不属于“一般费用项下”的大分类（参见单选第 3 题）。"}, {"emoji": "📊", "type": "multi", "score": 8, "stem": "12. 【销售额明细科目】的设定思路一般从以下几个维度中选择（　　　　）", "options": [{"key": "A", "text": "产品分类/服务分类"}, {"key": "B", "text": "客户分类"}, {"key": "C", "text": "销售渠道/销售方式"}, {"key": "D", "text": "部门"}], "answer": ["A", "B", "C", "D"], "explain": "销售额明细科目就是从不同维度对收入做结构性拆分，四个维度均属常用思路：A 按产品/服务分类——看清“卖什么”的产品结构与各产品线贡献；B 按客户分类——看清“卖给谁”的客户结构与客户质量；C 按销售渠道/方式——看清“怎么卖”的渠道效率（直销/代理/电商等）；D 按部门——看清“谁卖的”各业务单元贡献，并为划小核算单元打基础。企业依据自身经营特点与管控需要从中选择组合，核心原则是“看清经营”。"}, {"emoji": "🔧", "type": "multi", "score": 8, "stem": "13. 费用项下的科目设置，以下说法正确的是（　　　　）", "options": [{"key": "A", "text": "不存在永远固定不变的费用"}, {"key": "B", "text": "占销售额比例高的变动类费用优先摆放在前"}, {"key": "C", "text": "占销售额比例越高的科目，越应该进一步细分，看清其构成"}, {"key": "D", "text": "优先摆放在前的科目，往往意味着其削减/管控费用的空间较大"}], "answer": ["A", "B", "C", "D"], "explain": "四项均为费用科目设置的基本原则：A 正确——费用的“固定/变动”属性是相对的、暂时的，租约可谈、编制可调、资产可处置，不存在永远固定不变的费用，这是“费用最小化”理念的基础：任何费用都有被改善的空间；B 正确——科目排序原则：占比高（对利润影响大）且属变动类（与业务联动强）的费用优先摆放在前；C 正确——科目细分原则：占比越高的科目越要进一步细分以看清构成（与单选第 2 题“重点科目不合并”同理），占比小且无管控价值的才合并同类项；D 正确——排序在前即管控重点，往往意味着削减/管控空间较大，引导经营者优先投入改善精力，与 B 相互印证。"}, {"emoji": "🧭", "type": "multi", "score": 8, "stem": "14. 关于如何设置公司整体核算表的科目，以下说法正确的是（　　　　）", "options": [{"key": "A", "text": "由财务制定，经营者和部门负责人不用参与"}, {"key": "B", "text": "经营者和部门负责人主导制定，财务是技术顾问的角色"}, {"key": "C", "text": "经营者和部门负责人需要向财务学习/了解公司的往年的财务数据"}, {"key": "D", "text": "以发现经营问题，改善问题为核心进行设置"}], "answer": ["B", "C", "D"], "explain": "A 错误：核算表是经营工具而非财务报表，若由财务闭门制定，经营者看不懂、不认同、不使用，核算表就会沦为摆设；B 正确：经营者和部门负责人最了解业务实质，科目怎么设能“看清经营”应由他们主导判断；财务熟悉口径、规则与取数，扮演技术顾问的支持角色；C 正确：制定科目前，经营者和部门负责人需要向财务学习、了解公司往年的财务数据，使科目设置建立在真实的数据结构与经营现状之上，而非凭空设计；D 正确：科目设置的目的不是记账合规，而是以发现经营问题、改善问题为核心，让核算表真正服务于经营改善。"}, {"emoji": "⚖️", "type": "multi", "score": 8, "stem": "15. 如果核算表的费用项下不包含人工费（【结算收益】还包含人工费），以下说法正确的是（　　　　）", "options": [{"key": "A", "text": "结算收益＞税前利润"}, {"key": "B", "text": "最好设置【单位时间人工费】科目，并用这个数值与【单位时间附加值】的数值进行比较"}, {"key": "C", "text": "最好设置【单位时间人工费】科目，并用这个数值与【人均附加值】的数值进行比较"}, {"key": "D", "text": "如果【单位时间附加值】＞0，代表该月度盈利"}], "answer": ["A", "B"], "explain": "本题前提是京瓷式核算的特点：费用项下不含人工费（员工不是“成本”，人工费属于价值分配），因此【结算收益（附加值）】＝收入－非人工费用，人工费从结算收益中开支。A 正确：结算收益尚未扣除人工费，而税前利润已扣除人工费，故结算收益＞税前利润（差额主要是人工费）；B 正确：设置【单位时间人工费】（＝人工费÷总时间）后，与【单位时间附加值】口径一致（均为单位时间指标），可直接比较——单位时间附加值＞单位时间人工费，说明团队创造的价值覆盖了人工成本还有盈余；反之则实际亏损，这正是设置该对照科目的意义；C 错误：【单位时间人工费】的分母是“时间”，【人均附加值】的分母是“人数”，两者口径不一致，无法直接比较；D 错误：【单位时间附加值】＞0 只代表收入覆盖了非人工费用（附加值为正）；人工费尚未扣除，若附加值＜人工费，该月度实际仍为亏损，故附加值为正不等于盈利。"}], "appendix": [["单1", "C", "收入以销售额（交付）为准；接单（签单）额仅为先行指标"], ["单2", "A", "重点发展业务须单独设科目，不与其他科目合并同类项"], ["单3", "C", "成本明细另做可链接附表，主表保持简明"], ["单4", "A", "销售类费用排在管理费之前；销售费值得投入"], ["单5", "A", "餐饮试菜＝菜品研发，归研发类费用"], ["单6", "B", "核算表匹配管理水平，加班时间可暂不填写"], ["单7", "B", "时间刚性/无需时间管控时，用人均附加值代替"], ["单8", "B", "管理类费用是固定费，为核算表管控重点，相对比较情况下就不是重点"], ["单9", "A", "店铺核算表费用末尾加【公司总部费用分摊】"], ["单10", "A", "【单位时间产值】用于看清生产部门效率"], ["多1", "ACD", "一般费用大分类＝销售类+研发类+管理类；成本类为并列大类"], ["多2", "ABCD", "销售额明细科目维度：产品/客户/渠道/部门"], ["多3", "ABCD", "费用排序、细分原则；不存在永远固定不变的费用"], ["多4", "BCD", "经营者主导、了解历史数据、以发现问题改善为核心"], ["多5", "AB", "结算收益＞税前利润；单位时间人工费对标单位时间附加值"]], "note": "注：本参考答案依据阿米巴经营“公司整体核算表编制”辅导要点体系（京瓷单位时间核算制/经营会计原理）整理，与题目逐条对应，供学习与复核。"}</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const Q = D.questions, AP = D.appendix, NOTE = D.note;
+const total = Q.length;
+let cur = 0, userAns = Array(total).fill(null), answered = Array(total).fill(false);
+const app = document.getElementById('app');
+
+function startScreen(){
+  app.innerHTML = `
+  <div class="card center">
+    <h1>📒 公司整体核算表编制<br>互动测验</h1>
+    <p class="sub">阿米巴经营 · 经营会计（辅导要点）</p>
+    <p class="lead">共 ${total} 题：单选 10 题（6 分/题）+ 多选 5 题（8 分/题，全对才得分）<br>满分 100 分。点选项即出解析，答完自动算分。</p>
+    <button class="btn" onclick="go(0)">开始答题</button>
+  </div>`;
+}
+
+function go(i){
+  cur = i;
+  const q = Q[i];
+  const chosen = userAns[i] || [];
+  const isMulti = q.type === 'multi';
+  let opts = q.options.map(o=>{
+    let cls = 'opt';
+    if(chosen.includes(o.key)) cls += ' sel';
+    if(answered[i]){
+      if(q.answer.includes(o.key)) cls += ' correct';
+      else if(chosen.includes(o.key)) cls += ' wrong';
+      else cls += ' dim';
+      cls += ' locked';
+    }
+    return `<div class="${cls}" ${answered[i]?'':'onclick="pick(\''+o.key+'\')'}">
+      <div class="k">${o.key}</div><div class="t">${o.text}</div></div>`;
+  }).join('');
+
+  let explainHtml = '';
+  let actionBtn = '';
+  if(answered[i]){
+    const ok = isCorrect(i);
+    const tag = ok ? '<span class="tag ok">✓ 回答正确</span>' : '<span class="tag no">✗ 回答错误</span>';
+    const ansText = q.answer.join('、');
+    explainHtml = `<div class="explain">${tag}
+      <div style="margin:4px 0 8px">正确答案：<b>${ansText}</b></div>
+      <div>${q.explain}</div></div>`;
+    const last = i === total-1;
+    actionBtn = `<button class="btn" onclick="${last?'showResult()':'go('+(i+1)+')'}">${last?'查看成绩 🎯':'下一题 →'}</button>`;
+  } else {
+    if(isMulti){
+      actionBtn = `<button class="btn" id="viewBtn" disabled onclick="viewExplain()">查看解析</button>
+        <div class="hint">可多选，至少选 1 项后点「查看解析」</div>`;
+    } else {
+      actionBtn = `<div class="hint">👆 点击任意选项，立即查看解析</div>`;
+    }
+  }
+
+  app.innerHTML = `
+  <div class="card">
+    <div class="topbar"><span>第 ${i+1} / ${total} 题</span><span class="badge">${isMulti?'多选 · '+q.score+'分':'单选 · '+q.score+'分'}</span></div>
+    <div class="progress"><i style="width:${(i/total)*100}%"></i></div>
+    <div class="stem">${q.emoji} ${q.stem}</div>
+    ${opts}
+    ${explainHtml}
+    <div style="height:8px"></div>
+    ${actionBtn}
+  </div>`;
+  if(!answered[i] && isMulti) updateView();
+}
+
+function pick(key){
+  if(answered[cur]) return;
+  const q = Q[cur];
+  if(q.type === 'multi'){
+    let a = userAns[cur] || [];
+    a = a.includes(key) ? a.filter(x=>x!==key) : a.concat(key);
+    userAns[cur] = a;
+    go(cur);
+  } else {
+    userAns[cur] = [key];
+    answered[cur] = true;
+    go(cur);
+  }
+}
+
+function viewExplain(){
+  if(!userAns[cur] || userAns[cur].length===0) return;
+  answered[cur] = true;
+  go(cur);
+}
+
+function updateView(){
+  const b = document.getElementById('viewBtn');
+  if(b) b.disabled = !(userAns[cur] && userAns[cur].length>0);
+}
+
+function isCorrect(i){
+  const q = Q[i];
+  const a = (userAns[i]||[]).slice().sort().join(',');
+  const b = q.answer.slice().sort().join(',');
+  return a === b;
+}
+function scoreOf(i){ return (answered[i] && isCorrect(i)) ? Q[i].score : 0; }
+
+function showResult(){
+  let sum = 0, right = 0;
+  for(let i=0;i<total;i++){ sum += scoreOf(i); if(isCorrect(i)) right++; }
+  const grade = sum>=90?'优秀':sum>=75?'良好':sum>=60?'合格':'待加强';
+  app.innerHTML = `
+  <div class="card result center">
+    <div class="sec-title" style="text-align:center">🎉 答题完成</div>
+    <div class="score">
+      <div class="score-label">你的得分</div>
+      <div class="score-num">${sum}<span class="score-of"> 分 / 100</span></div>
+      <div class="line">答对 ${right} / ${total} 题 · 评级：${grade}</div>
+    </div>
+    <button class="btn ghost" onclick="location.reload()">重做一次</button>
+  </div>
+  <div class="card">
+    <div class="sec-title">📑 附：全部 15 题考点速览表</div>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>题号</th><th>答案</th><th>核心考点</th></tr>
+      ${AP.map(r=>`<tr><td>${r[0]}</td><td class="ans">${r[1]}</td><td>${r[2]}</td></tr>`).join('')}
+    </table>
+    </div>
+    <div class="note">${NOTE}</div>
+  </div>`;
+}
+
+startScreen();
+</script>
+</body>
+</html>
